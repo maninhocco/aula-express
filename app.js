@@ -8,6 +8,14 @@ var bodyParser = require('body-parser');
 var routes = require('./routes/index');
 var users = require('./routes/users');
 
+
+var API = {};
+API.beers = require('./modules/beers/routes/api');
+
+//API JSON
+aap.use('/api/beers', API.beers);
+
+
 var app = express();
 
 // view engine setup
