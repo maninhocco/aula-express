@@ -14,7 +14,7 @@ router.post('/', function(req, res, next) {
 });
 
 //Inserir
-router.update('/:id', function(req, res, next) {
+router.put('/:id', function(req, res, next) {
   Controller.update(req, res);
 });
 
