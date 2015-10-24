@@ -22,4 +22,9 @@ router.put('/:id', function(req, res, next) {
   Controller.get(req, res);
 });
 
+//Deletar
+router.delete('/:id', function(req, res, next) {
+  Controller.delete(req, res);
+});
+
 module.exports = router;

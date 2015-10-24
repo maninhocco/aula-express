@@ -64,14 +64,16 @@ var Controller = {
   },
 
   delete: function(req, res) {
-    var query = {name: /Skol/i};
-    Model.remove(query, function(err, data) {
+    var query = {_id: re.params.id};
+    var dados = req.body;
+
+    Model.remove(query, mod, function(err, data) {
       if(err) {
         console.log("Erro: ", err);
         msg = err;
       } else {
-        console.log("Cerveja deletada com sucesso, quantidade: ", data.result);
-        msg = data.result;
+        console.log("Cervejas atualizadas com sucesso: ", data);
+        msg = data;
       }
       res.json(msg);
     });
