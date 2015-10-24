@@ -1,0 +1,14 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    block content
+
+
+    ul
+      for beer in beers
+      li
+        a(href='/beers/#{beer._id}')
+          | #{beer.name} - #{beer.price}
