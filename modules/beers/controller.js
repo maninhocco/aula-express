@@ -59,7 +59,7 @@ var Controller = {
         msg = err;
       } else {
         console.log("Cervejas atualizadas com sucesso: ", data);
-        msg = data;
+        res.render('beer', { title: 'Exibindo uma cerveja', beer: data });
       }
       res
   },
