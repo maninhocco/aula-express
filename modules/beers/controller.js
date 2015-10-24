@@ -33,6 +33,20 @@ var Controller = {
     });
   },
 
+  get: function(req, res) {
+    var query = {};
+
+    Model.findOne(query, mod, function(err, data) {
+      if(err) {
+        console.log("Erro: ", err);
+        msg = err;
+      } else {
+        console.log("Cervejas atualizadas com sucesso: ", data);
+        msg = data;
+      }
+      res
+  },
+
   update: function(req, res) {
     var query = {_id: re.params.id};
     var dados = req.body;
